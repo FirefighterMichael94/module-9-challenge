@@ -1,0 +1,21 @@
+{
+  "name": "readmegen",
+  "version": "8.2.4",
+  "description": "inquirer",
+  "main": "index.js",
+  "scripts": {
+     
+  },
+  "repository": {
+    "type": "git",
+    "url": "Firefightermichael94"
+  },
+  "keywords": [
+    "inquirer"
+  ],
+  "author": "Michael Garner",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
