@@ -1,14 +1,21 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer')
+const { makeBadge, ValidationError } = require('badge-maker')
 const fs = require('fs')
-
 
 // Create new sections here that you want to have links to here this construct is your generateMarkdown
 const generateMarkdown = ({ title, description, install, usage, credits, github, email, toc, licensing }) => {
     const tocList = toc.split(',').map(item => `- [${item.trim()}](#${item.trim().toLowerCase().replace(/\s/g, '-')})`).join('\n');
-//as well as add here with ## infront of your section name and ${'sectionname lowercase'}literal  
-    return `# ${title}'s README
 
+    //WHAT DO DO WITH THE LICENSE
+    const licenseBadges = Array.isArray(licensing) ? licensing.join(' ') : licensing;
+
+
+    //as well as add here with ## infront of your section name and ${'sectionname lowercase'}literal  
+
+
+    return `# ${title}'s README
+   
   ## Description
   - ${description}
   
@@ -25,7 +32,7 @@ const generateMarkdown = ({ title, description, install, usage, credits, github,
   ${credits}
   
   ## License
-  ${licensing}
+  ${licenseBadges}
   
   ## Questions
   - My GitHub: ${github}
@@ -93,12 +100,19 @@ inquirer
             name:'licensing',
             message:'Which license do you have?',
             choices:[
-                {name:'Apache 2.0'},
-                {name:'MIT'},
-                {name:'ISC'},
-                {name:'GPL 3.0'},
-                {name:'BSD 3'},
-                {name:''},
+                {name:'Apache 2.0',
+                 value: '[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'         
+        },
+                {name:'MIT',
+                 value:'[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'                
+        },
+                {name:'ISC',
+                 value:'[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)'
+        },
+          
+                {name:'BSD 3',
+                 value:'[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause) '
+                },
             ]
 
     },
