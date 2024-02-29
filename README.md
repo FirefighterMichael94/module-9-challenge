@@ -1,30 +1,29 @@
 # Readme Generator's README
-  
+   
   ## Description
-  - This project creates a read me markdown for the user
+  - This project creates a readme markdown for the user by having them answer these questions
   
   ## Table of Contents
-  - [Description](#description)
+  - [How to install](#how-to-install)
 - [Usage](#usage)
 - [Credits](#credits)
-- [Licensing](#licensing)
+- [License](#license)
 - [Questions](#questions)
   
   ## How to install 
-  using inquirer 8.4.2 
+  Npm i after file is downloaded.
   
   ## Usage
-  answer the prompts and it creates a read me
+  Answer the questions in the prompt they will create a readme
   
   ## Credits
   Mikel Gearfun
   
   ## License
-  Apache 2.0,MIT
+  [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   
   ## Questions
-  - My GitHub: something close to mine
+  - My GitHub: fafagfag
   - Email: nanf@fun.com
   
-  video to file
-  https://classroom.google.com/c/NjY2MTA2MTA4NDA2/m/NjY2MTA3MzA1OTU1/details
+  
